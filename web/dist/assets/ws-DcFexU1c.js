@@ -1,0 +1,1 @@
+function s(o){const t=location.protocol==="https:"?"wss":"ws",n=o?`?token=${encodeURIComponent(o)}`:"",e=`${t}://${location.host}/ws${n}`;return new WebSocket(e)}function c(o,t){o&&o.readyState===WebSocket.OPEN&&o.send(JSON.stringify(t))}export{s as o,c as s};

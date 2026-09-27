@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600;700;900&display=swap');
+
+:root {
+  /* Element Plus 主题覆盖：古铜朱红 */
+  --el-color-primary: #a83323;
+  --el-color-primary-light-3: #c2604f;
+  --el-color-primary-light-5: #d28778;
+  --el-color-primary-light-7: #e3b2a7;
+  --el-color-primary-light-8: #ebc7bf;
+  --el-color-primary-light-9: #f5ddd8;
+  --el-color-primary-dark-2: #86281b;
+  --el-border-radius-base: 6px;
+  --el-font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+
+  --wood-dark: #2a1a0c;
+  --wood-deep: #1d1107;
+  --wood-mid: #4a2e15;
+  --paper: #f3e4c4;
+  --gold: #c9a24b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+  color: #efe0c0;
+  background:
+    radial-gradient(ellipse at 30% 0%, #3a2410 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 100%, #33200e 0%, transparent 55%),
+    repeating-linear-gradient(92deg, #211308 0px, #281708 7px, #221307 14px, #291809 21px),
+    var(--wood-deep);
+  background-attachment: fixed;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.font-brush {
+  font-family: 'Ma Shan Zheng', 'Noto Serif SC', cursive;
+}
+
+/* 通用木框面板 */
+.wood-panel {
+  background:
+    linear-gradient(160deg, rgba(247, 233, 200, 0.97), rgba(232, 210, 166, 0.97));
+  color: #432a12;
+  border: 1px solid #8a5a28;
+  border-radius: 10px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 3px rgba(120, 78, 34, 0.25);
+}
+
+.dark-panel {
+  background: linear-gradient(160deg, rgba(58, 36, 18, 0.92), rgba(38, 22, 10, 0.92));
+  border: 1px solid rgba(201, 162, 75, 0.4);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Element 组件在古风背景下的微调 */
+.el-card {
+  --el-card-bg-color: rgba(243, 228, 196, 0.96);
+  --el-card-text-color: #432a12;
+  border-color: #8a5a28;
+}
+
+.el-button {
+  font-family: inherit;
+}
+
+.el-dialog {
+  --el-dialog-bg-color: #f3e4c4;
+  border: 1px solid #8a5a28;
+  border-radius: 10px;
+}
+
+.el-input__wrapper,
+.el-select__wrapper {
+  box-shadow: 0 0 0 1px #b08a55 inset;
+}
+
+.el-input__wrapper.is-focus,
+.el-select__wrapper.is-focused {
+  box-shadow: 0 0 0 1px #a83323 inset;
+}
+
+.el-tabs__item {
+  color: #d8c39a;
+}
+
+.el-tabs__item.is-active {
+  color: #f0d89a;
+}
+
+.el-tabs__active-bar {
+  background-color: var(--gold);
+}
+
+.el-tabs__nav-wrap::after {
+  background-color: rgba(201, 162, 75, 0.3);
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 162, 75, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 页面切换动画 */
+.page-fade-enter-active,
+.page-fade-leave-active {
+  transition: opacity 0.28s cubic-bezier(0.2, 0, 0, 1), transform 0.28s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.page-fade-enter-from {
+  opacity: 0;
+  transform: translateY(8px) scale(0.995);
+}
+
+.page-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-8px) scale(0.995);
+}
+
+/* 按钮微按压交互 */
+.el-button {
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.el-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+.el-button:active {
+  transform: translateY(1px) scale(0.98) !important;
+}
+
+/* 弹窗遮罩弹出动画 */
+.overlay-pop-enter-active,
+.overlay-pop-leave-active {
+  transition: all 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.overlay-pop-enter-from,
+.overlay-pop-leave-to {
+  opacity: 0;
+  transform: scale(0.88);
+}
