@@ -27,6 +27,7 @@ function logout() {
         </div>
       </div>
       <div class="user-area">
+        <el-button size="small" plain @click="router.push('/about')">关于</el-button>
         <el-button size="small" plain @click="router.push('/puzzle')">残局闯关</el-button>
         <template v-if="user.isLogin">
           <span class="welcome">棋友 <b>{{ user.username }}</b></span>

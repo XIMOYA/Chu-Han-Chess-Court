@@ -6,6 +6,7 @@ const routes = [
   { path: '/room/:code', name: 'room', component: () => import('../views/Room.vue') },
   { path: '/replay/:id', name: 'replay', component: () => import('../views/Replay.vue') },
   { path: '/puzzle', name: 'puzzle', component: () => import('../views/Puzzle.vue') },
+  { path: '/about', name: 'about', component: () => import('../views/About.vue') },
   { path: '/admin', name: 'admin', component: () => import('../views/Admin.vue'), meta: { requiresAdmin: true } }
 ]
 
